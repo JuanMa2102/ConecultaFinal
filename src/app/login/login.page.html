@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="coneculta">
+    <ion-title>Coneculta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [formGroup]="formLogin">
+  <br>
+  <br>
+  <br>
+ 
+ 
+    
+    <div class="col ion-text-center">
+      <div class="px">
+      <ion-item class="phone">
+        <ion-icon name="person-circle-sharp" color="coneculta"></ion-icon>
+        <ion-input type="text" formControlName="usuario" name="usuario" placeholder="Usuario">
+        </ion-input>
+      </ion-item>
+      </div>
+    
+      <div class="px">
+      <ion-item class="password">
+        <ion-icon name="lock-closed" color="coneculta"></ion-icon>
+        <ion-input type="password" formControlName="pass" name="pass" placeholder="Contraseña">
+        </ion-input>
+      </ion-item>
+    </div>
+      <br>
+      <br>
+    <div class="botonLogin">
+      <ion-button  type="submit" color="coneculta" (click)="login()">Iniciar Sesion</ion-button> 
+    </div>
+      
+    </div>
+
+
+
+</ion-content>

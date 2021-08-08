@@ -1,0 +1,58 @@
+*{
+    font-family: var(--font-gothic);
+}
+
+h2{
+ text-align: center;
+ font-size: 18px;
+ color: var(--ion-color-coneculta);
+}
+
+h4{
+ text-align: center;
+ font-size: 14px;
+ padding-left: 4%;
+ padding-right: 4%;
+ padding-top: 4%;
+}
+
+.boton{
+    width: 250px;
+    height: 40px;
+}
+
+.cont1{
+    text-align: center;
+}
+
+.input1{
+    width: 300px;
+    
+}
+
+.phone{
+    text-align: center;
+    font-size: 14px;
+}
+
+.password{
+    text-align: center;
+    font-size: 14px;
+}
+
+.text-danger{
+    font-size: 12px;
+    text-align: center;
+    color: var(--ion-color-coneculta);
+}
+
+.botonLogin{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 40%;
+}
+
+.px{
+    padding-left: 14%;
+    padding-right: 14%;
+}

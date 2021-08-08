@@ -1,0 +1,215 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="coneculta">
+    <ion-buttons slot="start" >
+      <ion-menu-button color="light" ></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+
+  </ion-toolbar>
+  
+    <div class="row">
+      <div class="col1">
+        <div class="dummy-card">
+          <div class="clock">
+            <div class="num num1">I</div>
+                <div class="snum num1-1">I</div>
+                <div class="snum num1-2">I</div>
+                <div class="snum num1-3">I</div>
+                <div class="snum num1-4">I</div>
+            <div class="num num2">I</div>
+                <div class="snum num2-1">I</div>
+                <div class="snum num2-2">I</div>
+                <div class="snum num2-3">I</div>
+                <div class="snum num2-4">I</div>
+            <div class="num num3">I</div>
+                <div class="snum num3-1">I</div>
+                <div class="snum num3-2">I</div>
+                <div class="snum num3-3">I</div>
+                <div class="snum num3-4">I</div>
+            <div class="num num4">I</div>
+                <div class="snum num4-1">I</div>
+                <div class="snum num4-2">I</div>
+                <div class="snum num4-3">I</div>
+                <div class="snum num4-4">I</div>
+            <div class="num num5">I</div>
+                <div class="snum num5-1">I</div>
+                <div class="snum num5-2">I</div>
+                <div class="snum num5-3">I</div>
+                <div class="snum num5-4">I</div>
+            <div class="num num6">I</div>
+                <div class="snum num6-1">I</div>
+                <div class="snum num6-2">I</div>
+                <div class="snum num6-3">I</div>
+                <div class="snum num6-4">I</div>
+            <div class="num num7">I</div>
+                <div class="snum num7-1">I</div>
+                <div class="snum num7-2">I</div>
+                <div class="snum num7-3">I</div>
+                <div class="snum num7-4">I</div>
+            <div class="num num8">I</div>
+                <div class="snum num8-1">I</div>
+                <div class="snum num8-2">I</div>
+                <div class="snum num8-3">I</div>
+                <div class="snum num8-4">I</div>
+            <div class="num num9">I</div>
+                <div class="snum num9-1">I</div>
+                <div class="snum num9-2">I</div>
+                <div class="snum num9-3">I</div>
+                <div class="snum num9-4">I</div>
+            <div class="num num10">I</div>
+                <div class="snum num10-1">I</div>
+                <div class="snum num10-2">I</div>
+                <div class="snum num10-3">I</div>
+                <div class="snum num10-4">I</div>
+            <div class="num num11">I</div>
+                <div class="snum num11-1">I</div>
+                <div class="snum num11-2">I</div>
+                <div class="snum num11-3">I</div>
+                <div class="snum num11-4">I</div>
+            <div class="num num12">I</div>
+                <div class="snum num12-1">I</div>
+                <div class="snum num12-2">I</div>
+                <div class="snum num12-3">I</div>
+                <div class="snum num12-4">I</div>
+            <div class="hr-hand" #hrHand></div>
+            <div class="min-hand" #minHand></div>
+            <div class="sec-hand" #secHand></div>
+          </div>
+        </div>
+    
+      </div>
+      <div class="col2 pb-10 pt-5">
+        <div class="fontzise-25 white mb-2">{{dia}}</div>
+        <div class="fontzise-25 white mb-2">{{hora}}</div>
+        <div class="fontzise-15 gray mb-2">{{fecha}}</div>
+      </div>
+</div>
+
+</ion-header>
+<ion-content>
+
+    <ion-grid>
+      
+      <ion-row> 
+        <ion-col class="border-gray px-5 mt-1">
+          
+          <div class="row">
+            <div class="col-40 px-4">
+              <div><ion-label class="text-zise">Fecha</ion-label></div>
+            </div>
+            <div class="col-60">
+              <div class="row">
+                <div class="col-25 text-center">
+                  <div><ion-label >Tipo</ion-label></div>
+                </div>
+                <div class="col-25 text-center">
+                  <div><ion-label >J</ion-label></div>
+                </div>
+                <div class="col-25 text-center">
+                  <div><ion-label >R</ion-label></div>
+                </div>
+                <div class="col-25 text-center">
+                  <div><ion-label >F</ion-label></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </ion-col>
+      </ion-row>
+        
+        <ion-row *ngFor="let asistencia of ListHours"> 
+            <ion-col class="border-gray px-5">
+              
+              <div class="row">
+                <div class="col-40 px-4">
+                    <div><ion-label class="primary-color">{{asistencia.Dia}}</ion-label></div>
+                </div>
+
+                <div class="col-60 ">
+                  <div class="row">
+                      <div class="col-25 border-gray text-center">
+                        <div><ion-label class="primary-color">{{asistencia.TipoChecada}}</ion-label></div>
+                      </div>
+                      <div class="col-25 border-gray text-center">
+                        <div><ion-label class="primary-color">{{asistencia.Justificada}}</ion-label></div>
+                      </div>
+                      <div class="col-25 border-gray text-center">
+                        <div><ion-label class="primary-color">{{asistencia.Retardo}}</ion-label></div>
+                      </div>
+                      <div class="col-25 border-gray text-center">
+                        <div><ion-label class="primary-color ">{{asistencia.Falta}}</ion-label></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row pt-2">
+                <div class="col-40 px-4">
+                  <div><ion-label class="text-zise">{{asistencia.Fecha}}</ion-label></div>
+                </div>
+                <div class="col-60 ">
+                  <div class="text-center"><ion-label class="text-zise ">{{asistencia.HoraE}}  -  {{asistencia.HoraS}}</ion-label></div>
+                </div>
+              </div>
+
+            </ion-col>
+        </ion-row>
+        
+        <ion-row *ngIf="hora_salida == '17:00' "> 
+          <ion-col class="border-gray px-5">
+            <div class="row">
+              <div class="col-80 px-4">
+                  <div><ion-label class=primary-color>Lunes</ion-label></div>
+                  <div><ion-label>08/02/2021</ion-label></div>
+              </div>
+              <div class="col-20 pl-2 pt-2">
+                  <ion-icon size="large" name="time-sharp"></ion-icon>
+              </div>
+            </div>
+          </ion-col>
+      </ion-row>
+
+    </ion-grid>
+    
+    
+    <!--footer class="contenedor">
+      
+      <form (ngSubmit)="inicio()">
+        <div class="mb-25 px-6">
+          <div class="text-center">
+            <ion-button expand="full" type="submit" color="coneculta">Ver asistencias</ion-button>
+          </div>
+        </div>
+      </form>
+
+    </footer-->
+  
+<ion-card class="contenedor" slot="fixed">
+  <ion-item>
+    
+    <ion-label>
+      <h3>{{Empleado}}</h3>
+      <p>Total de registros: {{Total}}</p>
+      <p>Retardos: {{Retardos}}</p>
+      <p>Faltas: {{Faltas}}</p>
+    </ion-label>
+  </ion-item>
+</ion-card>
+
+</ion-content>
+
+
+<!-- <ion-footer class="contenedor">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+    </ion-card-content>
+  </ion-card>
+</ion-footer>  -->
+

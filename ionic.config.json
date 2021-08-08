@@ -1,0 +1,7 @@
+{
+  "name": "Login-Coneculta",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
