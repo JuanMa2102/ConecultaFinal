@@ -1,8 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar color="coneculta">
-    <ion-buttons slot="start" >
-      <ion-menu-button color="light" ></ion-menu-button>
-    </ion-buttons>
+    
     <ion-title>Asistencia</ion-title>
 
   </ion-toolbar>
@@ -88,128 +86,73 @@
 </ion-header>
 <ion-content>
 
-    <ion-grid>
-      
-      <ion-row> 
-        <ion-col class="border-gray px-5 mt-1">
-          
-          <div class="row">
-            <div class="col-40 px-4">
-              <div><ion-label class="text-zise">Fecha</ion-label></div>
-            </div>
-            <div class="col-60">
-              <div class="row">
-                <div class="col-25 text-center">
-                  <div><ion-label >Tipo</ion-label></div>
-                </div>
-                <div class="col-25 text-center">
-                  <div><ion-label >J</ion-label></div>
-                </div>
-                <div class="col-25 text-center">
-                  <div><ion-label >R</ion-label></div>
-                </div>
-                <div class="col-25 text-center">
-                  <div><ion-label >F</ion-label></div>
-                </div>
-              </div>
-            </div>
+    <ion-card *ngFor="let asistencia of ListHours">
+      <ion-card-header>
+        <ion-card-subtitle>{{asistencia.Fecha}}</ion-card-subtitle>
+        <ion-card-title>{{asistencia.Dia}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <div class="row">
+          <div class="col-25 text-center">
+            <div><ion-label>Tipo</ion-label></div>
           </div>
-
-        </ion-col>
-      </ion-row>
-        
-        <ion-row *ngFor="let asistencia of ListHours"> 
-            <ion-col class="border-gray px-5">
-              
-              <div class="row">
-                <div class="col-40 px-4">
-                    <div><ion-label class="primary-color">{{asistencia.Dia}}</ion-label></div>
-                </div>
-
-                <div class="col-60 ">
-                  <div class="row">
-                      <div class="col-25 border-gray text-center">
-                        <div><ion-label class="primary-color">{{asistencia.TipoChecada}}</ion-label></div>
-                      </div>
-                      <div class="col-25 border-gray text-center">
-                        <div><ion-label class="primary-color">{{asistencia.Justificada}}</ion-label></div>
-                      </div>
-                      <div class="col-25 border-gray text-center">
-                        <div><ion-label class="primary-color">{{asistencia.Retardo}}</ion-label></div>
-                      </div>
-                      <div class="col-25 border-gray text-center">
-                        <div><ion-label class="primary-color ">{{asistencia.Falta}}</ion-label></div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row pt-2">
-                <div class="col-40 px-4">
-                  <div><ion-label class="text-zise">{{asistencia.Fecha}}</ion-label></div>
-                </div>
-                <div class="col-60 ">
-                  <div class="text-center"><ion-label class="text-zise ">{{asistencia.HoraE}}  -  {{asistencia.HoraS}}</ion-label></div>
-                </div>
-              </div>
-
-            </ion-col>
-        </ion-row>
-        
-        <ion-row *ngIf="hora_salida == '17:00' "> 
-          <ion-col class="border-gray px-5">
-            <div class="row">
-              <div class="col-80 px-4">
-                  <div><ion-label class=primary-color>Lunes</ion-label></div>
-                  <div><ion-label>08/02/2021</ion-label></div>
-              </div>
-              <div class="col-20 pl-2 pt-2">
-                  <ion-icon size="large" name="time-sharp"></ion-icon>
-              </div>
-            </div>
-          </ion-col>
-      </ion-row>
-
-    </ion-grid>
-    
-    
-    <!--footer class="contenedor">
-      
-      <form (ngSubmit)="inicio()">
-        <div class="mb-25 px-6">
-          <div class="text-center">
-            <ion-button expand="full" type="submit" color="coneculta">Ver asistencias</ion-button>
+          <div class="col-25 text-center">
+            <div><ion-label >J</ion-label></div>
+          </div>
+          <div class="col-25 text-center">
+            <div><ion-label >R</ion-label></div>
+          </div>
+          <div class="col-25 text-center">
+            <div><ion-label >F</ion-label></div>
           </div>
         </div>
-      </form>
 
-    </footer-->
-  
-<ion-card class="contenedor" slot="fixed">
-  <ion-item>
+        <div class="row">
+          <div class="col-25 border-gray text-center" style="border-radius:2rem; height: 2rem;">
+            <div><ion-label class="primary-color">{{asistencia.TipoChecada}}</ion-label></div>
+          </div>
+          <div class="col-25 border-gray text-center" style=" border-radius:250px;height: 2rem;">
+            <div><ion-label class="primary-color">{{asistencia.Justificada}}</ion-label></div>
+          </div>
+          <div class="col-25 border-gray text-center" style="border-radius:250px; height: 2rem;">
+            <div><ion-label class="primary-color">{{asistencia.Retardo}}</ion-label></div>
+          </div>
+          <div class="col-25 border-gray text-center" style="border-radius:250px; height: 2rem;">
+            <div><ion-label class="primary-color ">{{asistencia.Falta}}</ion-label></div>
+          </div>
+        </div>  
+
+        <ion-item>
+          <ion-card-subtitle>{{asistencia.HoraE}}  -  {{asistencia.HoraS}}</ion-card-subtitle>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-label style="font-weight: 600;">{{Empleado}}</ion-label>
+      </ion-card-header>
     
-    <ion-label>
-      <h3>{{Empleado}}</h3>
-      <p>Total de registros: {{Total}}</p>
-      <p>Retardos: {{Retardos}}</p>
-      <p>Faltas: {{Faltas}}</p>
-    </ion-label>
-  </ion-item>
-</ion-card>
+      <ion-card-content>
+
+        <ion-item>
+          <ion-icon name="checkmark-outline" slot="start"></ion-icon>
+          <ion-label style="font-size: .9rem;">Total de registros: {{Total}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
+          <ion-label style="font-size: .9rem;">Retardos: {{Retardos}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="close-outline" slot="start"></ion-icon>
+          <ion-label style="font-size: .9rem;">Faltas: {{Faltas}}</ion-label>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
 
 </ion-content>
 
-
-<!-- <ion-footer class="contenedor">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-    </ion-card-content>
-  </ion-card>
-</ion-footer>  -->
 

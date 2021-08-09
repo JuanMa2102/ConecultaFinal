@@ -1,35 +1,33 @@
 <ion-header>
-  <ion-toolbar color="coneculta">
-    <ion-title>Coneculta</ion-title>
-  </ion-toolbar>
+  
 </ion-header>
+
 <ion-content [formGroup]="formLogin">
-  <br>
-  <br>
-  <br>
- 
- 
-    
-    <div class="col ion-text-center">
+  
+  <ion-toolbar mode="md" style="margin-top: 6em;">
+    <ion-title type="md" style="font-size: 2em; font-style: bold; font-weight: 600 ;color: black;"> Hola !!</ion-title>
+    <ion-title type="md" style="font-size: 2em; font-style: bold; font-weight: 600;color: black;"> Bienvenido</ion-title>
+  </ion-toolbar>
+
+    <div class="col ion-text-center" style="margin-top: 4em;">
       <div class="px">
-      <ion-item class="phone">
-        <ion-icon name="person-circle-sharp" color="coneculta"></ion-icon>
-        <ion-input type="text" formControlName="usuario" name="usuario" placeholder="Usuario">
-        </ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="font-size: .9em;color:dimgray; font-weight: 600;" >USUARIO</ion-label>
+          <ion-input type="text" formControlName="usuario" name="usuario"></ion-input>
+        </ion-item>
       </div>
     
-      <div class="px">
-      <ion-item class="password">
-        <ion-icon name="lock-closed" color="coneculta"></ion-icon>
-        <ion-input type="password" formControlName="pass" name="pass" placeholder="Contraseña">
-        </ion-input>
+      <div class="px" style="margin-top:2em">
+      <ion-item>
+        <ion-label position="stacked" style="font-size: .9em; color:dimgray;font-weight: 600">CONTRASEÑA</ion-label>
+        <ion-input type="password" formControlName="pass" name="pass"></ion-input>
       </ion-item>
-    </div>
+      </div>
+
       <br>
       <br>
-    <div class="botonLogin">
-      <ion-button  type="submit" color="coneculta" (click)="login()">Iniciar Sesion</ion-button> 
+    <div class="botonLogin" style="margin-top: 2em;">
+      <ion-button mode="ios" (click)="login()" expand="block">INICIAR SESION</ion-button>
     </div>
       
     </div>
