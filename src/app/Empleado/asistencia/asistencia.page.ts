@@ -156,7 +156,7 @@ export class AsistenciaPage implements OnInit {
     if((date.getMonth()+1)<10)
       this.month = "0"+ (date.getMonth()+1);
 
-      let fecha = this.month+"/"+23+"/"+date.getFullYear();
+      let fecha = this.month+"/"+this.day+"/"+date.getFullYear();
 
       return fecha;
   }

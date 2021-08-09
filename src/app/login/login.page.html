@@ -11,14 +11,14 @@
 
     <div class="col ion-text-center" style="margin-top: 4em;">
       <div class="px">
-        <ion-item>
+        <ion-item mode="md">
           <ion-label position="stacked" style="font-size: .9em;color:dimgray; font-weight: 600;" >USUARIO</ion-label>
           <ion-input type="text" formControlName="usuario" name="usuario"></ion-input>
         </ion-item>
       </div>
     
       <div class="px" style="margin-top:2em">
-      <ion-item>
+      <ion-item mode="md">
         <ion-label position="stacked" style="font-size: .9em; color:dimgray;font-weight: 600">CONTRASEÑA</ion-label>
         <ion-input type="password" formControlName="pass" name="pass"></ion-input>
       </ion-item>
@@ -27,7 +27,7 @@
       <br>
       <br>
     <div class="botonLogin" style="margin-top: 2em;">
-      <ion-button mode="ios" (click)="login()" expand="block">INICIAR SESION</ion-button>
+      <ion-button style="--background: #621132;--background-hover: #560f2c; --color-activated: #560f2c" mode="ios" (click)="login()" expand="block">INICIAR SESION</ion-button>
     </div>
       
     </div>

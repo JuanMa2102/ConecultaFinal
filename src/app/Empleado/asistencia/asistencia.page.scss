@@ -3,9 +3,12 @@ ion-grid{
     width: 100%;
     margin-bottom: 38%;
  }
- 
+ion-header{
+   background: #560f2c;
+}
+
  .col1 {
-     background: var(--ion-color-coneculta);
+     background: #560f2c;
      width: 50%;
      display: flex;
      justify-content: center;
@@ -17,7 +20,7 @@ ion-grid{
   }
  
   .col2 {
-     background: var(--ion-color-coneculta);
+     background: #560f2c;
      width: 50%;
   }
  

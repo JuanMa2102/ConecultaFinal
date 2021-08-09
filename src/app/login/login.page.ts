@@ -25,7 +25,10 @@ export class LoginPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.menu.enable(false);
+    if(this.authService.getCurrentId() !== null)
+        this.router.navigate(['/asistencia']);
+    else
+      this.menu.enable(false);
   }
 
 
